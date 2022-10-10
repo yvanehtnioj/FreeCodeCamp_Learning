@@ -1,0 +1,64 @@
+/*
+My CSS code from memory for Rothko Painting
+Certification: (New) Responsive Web Design
+Project: Learn the CSS Box Model by building a Rothko painting
+*/
+
+.frame{
+	width: 500px;
+	padding: 50px;
+	border: 50px solid black;
+	margin: 20px auto;
+}
+
+.canvas {
+	width: 500px;
+	height: 600px;
+	border: 1px;
+	background-color: sandybrown;
+	overflow: hidden; /* so that the margin overflow from "one" 
+						does NOT push down "canvas". With this, 
+						the margin-top of "one" is flush with the 
+						content-top of "canvas". The alternative
+						is applying 1px padding to "canvas" which
+						then does the same. Only issue is that 
+						"canvas" is slightly pushed to the right
+						and down by 1px */
+	filter: blur(2px);
+}
+
+.one {
+	width: 425px;
+	height: 150px;
+	margin: 20px auto;
+	background-color: yellow;
+	border-radius: 9px;
+	transform: rotate(-0.2deg);
+	box-shadow: 0 0 0 5px yellow;
+}
+
+.two {
+	width: 425px;
+	height: 200px;
+	margin: 0 auto 20px auto; /* add bottom-margin to separate "two" and "three" */
+	background-color: darkred;
+	border-radius: 15px;
+	transform: rotate(0.4deg);
+	box-shadow: 0 0 0 5px darkred;
+
+}
+
+.one, .two {
+	filter: blur(1px);
+}
+
+.three {
+	width: 91%; /* 91% of parent(canvas width) = 91% of 500px = 455px */
+	height: 28%; /* 28% of parent(canvas height) = 28% of 600px = 168px */
+	margin: 0 auto;
+	background-color: red;
+	border-radius: 15px 50px 30px;
+	filter: blur(3px);
+	transform: rotate(-0.3deg);
+	box-shadow: 0 0 0 5px red;
+}

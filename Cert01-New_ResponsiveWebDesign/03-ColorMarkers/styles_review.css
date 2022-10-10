@@ -1,0 +1,66 @@
+/*
+My CSS code from memory for color markers
+Certification: (New) Responsive Web Design
+Project: Learn CSS Colors by building a set of colored markers
+*/
+
+h1 {
+	text-align: center;
+}
+
+/* container has the marker with each color */
+.container {
+	background-color: rgb(255, 255, 255);
+	padding: 10px 0;
+}
+
+.marker {
+	width: 200px;
+	height: 25px;
+	margin: 10px auto;
+	/* The left-right (L/R) auto setting in margin: U/D L/R; 
+	(i.e. margin: 10px AUTO;) centers the marker in the 
+	container class */
+}
+
+/*linear gradient shading for eaach color */
+.red {
+	background: linear-gradient(180deg, rgb(78,53,36), rgb(238, 75, 43), rgb(153,0,0));
+	box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+
+.green {
+	background: linear-gradient(180deg, #25980E, #49FD25, #357529);
+	box-shadow: 0 0 20px 0 #3B7E20CC;
+
+}
+
+.blue {
+	background: linear-gradient(180deg, hsl(240,99%,40%), hsl(180,40%,70%), hsl(240,99%,60%));
+	box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+}
+
+/* cap and translucent sleeve for each pen */
+.cap, .sleeve {
+	display: inline-block; 
+	/* <div> elements stack on each other.
+		Therefore, display: inline-block is necessary to keep
+		both <div> elements on the same line */
+}
+
+.cap {
+	width: 60px;
+	height: 25px;
+}
+
+.sleeve {
+	width: 110px;
+	height: 25px;
+	background-color: rgba(255,255,255,0.5);
+	
+	border-left: 10px double rgba(0,0,0,0.75); 
+	/* This ADDS 10px to the left of the sleeve.
+		So if you planned on keeping the total marker
+		width to 120px, then set width: 110px;
+		and border-left-width: 10px; (b/c 110+10=120) */
+}

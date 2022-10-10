@@ -1,0 +1,123 @@
+<!--
+My HTML code from memory for survey form
+Certification: (New) Responsive Web Design
+Project: Survey Form (required for certification)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Survey Form</title>
+		<link href="styles_review.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<!-- Container for the whole <body> -->	
+		<div class="container">
+			<!-- Header section: main titles about survey -->
+			<header>
+				<h1>freeCodeCamp Survey Form</h1>
+				<p>Thank you for taking the time to complete this survey</p>
+			</header>
+
+			<!-- Start of survey form-->
+			<main>
+				<form>
+					<!-- Name (required) -->
+					<div class="form-section">
+						<label id="name-label" for="name">Name<input id="name" type="text" name="name" placeholder="Name" required/>
+						</label>
+					</div>
+
+					<!-- Email (required) -->
+					<div class="form-section">
+						<label id="email-label" for="email">Email<input id="email" type="email" name="email" pattern="[a-zA-Z0-9]{8,}" placeholder="Email" required/>
+						</label>
+					</div>
+
+					<!-- Age (optional) -->
+					<div class="form-section">
+						<label id="age-label" for="age">Age (optional)<input id="age" type="number" min="13" max="120" name="age" placeholder="Age (in years)" />
+						</label>
+					</div>
+
+					<!-- Role (optional) -->
+					<div class="form-section">
+						<label id="role-label" for="role">Which option best describes your currernt role?
+							<select id="role">
+								<option value="">Select current role</option>
+								<option value="student">Student</option>
+								<option value="ft-job">Full Time Job</option>
+								<option value="ft-learner">Full Time Learner</option>
+								<option value="preferNot">Prefer Not To Say</option>
+								<option value="other">Other</option>
+							</select>
+						</label>
+					</div>
+
+					<!-- Recommendations -->
+					<div class="form-section">
+						<label id="recommend-label" for="recommend-types">Would you recommend freeCodeCamp to a friend?
+							<label id="rec-definitely-label" for="recommend-definitely"><input id="recommend-definitely" type="radio" name="recommend-types" checked/>Definitely</label>
+							
+							<label id="rec-maybe-label" for="recommend-maybe"><input id="recommend-maybe" type="radio" name="recommend-types"/>Maybe</label>
+
+							<label id="rec-notsure-label" for="recommend-not-sure"><input id="recommend-not-sure" type="radio" name="recommend-types"/>Not sure</label>
+						</label>
+					</div>
+
+					<!-- Favourite Features (optional) -->
+					<div class="form-section">
+						<label id="feature-label" for="feature">What is your favourite feature of freeCodeCamp?
+							<select id="feature">
+								<option value="">Select favourite feature</option>
+								<option value="challenges">Challenges</option>
+								<option value="projects">Projects</option>
+								<option value="community">Community</option>
+								<option value="open-source">Open Source</option>
+							</select>
+						</label>
+					</div>
+
+					<!-- Improvements (optional) -->
+					<div class="form-section">
+						<label id="improvements-label" for="improvements">Would you recommend freeCodeCamp to a friend?
+
+							<label id="improve-frontend-label" for="improve-frontend"><input id="improve-frontend" type="checkbox" name="improvements"/>Front-End Projects</label>
+							
+							<label id="improve-backend-label" for="improve-backend"><input id="improve-backend" type="checkbox" name="improvements"/>Back-End Projects</label>
+
+							<label id="improve-dataViz-label" for="improve-dataViz"><input id="improve-dataViz" type="checkbox" name="improvements"/>Data Visualization</label>
+
+							<label id="improve-challenges-label" for="improve-challenges"><input id=" improve-challenges" type="checkbox" name="improvements"/>Challenges</label>
+
+							<label id="improve-openSource-label" for="improve-openSource"><input id="improve-openSource" type="checkbox" name="improvements"/>Open Source Community</label>
+
+							<label id="improve-gitter-label" for="improve-gitter"><input id="improve-gitter" type="checkbox" name="improvements"/>Gitter help rooms</label>
+
+							<label id="improve-videos-label" for="improve-videos"><input id="improve-videos" type="checkbox" name="improvements"/>Videos</label>
+
+							<label id="improve-meetups-label" for="improve-meetups"><input id="improve-meetups" type="checkbox" name="improvements"/>City Meetup Groups</label>
+
+							<label id="improve-wiki-label" for="improve-wiki"><input id="improve-wiki" type="checkbox" name="improvements"/>Wiki</label>
+
+							<label id="improve-forum-label" for="improve-forum"><input id="improve-forum" type="checkbox" name="improvements"/>Forum</label>
+
+							<label id="improve-additionalCourses-label" for="improve-additionalCourses"><input id="improve-additionalCourses" type="checkbox" name="improvements"/>Additional Courses</label>
+
+						</label>
+					</div>
+
+					<!-- Comments/Suggestions (optional) -->
+					<div class="form-section">
+						<label id="comments-label" for="comments">Any comments or suggestions?<textarea id="comments" name="comments" rows="5" cols="40" placeholder="I love freeCodeCamp because..."></textarea>
+						</label>
+					</div>
+
+					<!-- Submit button -->
+					<input id="submit" type="submit" name="Submit"/>
+				</form>
+			</main>
+		</div>		
+	</body>
+</html>
