@@ -1,0 +1,65 @@
+/* My CSS code from memory for Cat Photo Gallery
+Certification: (New) Responsive Web Design
+Project: Learn CSS Flexbox by building a Cat Photo Gallery
+*/
+
+/* resizing for different windows */
+* {
+	box-sizing: border-box;
+}
+
+/* body */
+body{
+	font-family: sans-serif;
+	margin: 0;
+}
+
+/* header class */
+.header {
+	/* Content Box properties*/
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+
+	/* Other CSS Box properties */
+	padding: 30px;
+	border-bottom: 10px solid orange;
+	margin: 0 auto;
+}
+
+/* gallery class */
+.gallery{
+	/* CSS flexbox for flex items */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;/* for main axis (row) */
+	align-items: center;/* for cross axis (column) */
+	gap: 20px; /* gap between flex items (i.e. images) */
+
+	/* CSS Box properties */
+	max-width: 1200px;
+	padding: 20px 10px;
+	margin: 0 auto;
+}
+
+/* images in the gallery */
+.gallery img {
+	width: 100%;
+	max-width: 350px;
+	height: 300px;
+	object-fit: cover; /* keeps aspect ratio by cropping photo */
+	border-radius: 10px;
+}
+
+/* to left-align the odd-numbered image
+	in an even number of columns.
+	This is because the "justify-content:center;"
+	property center aligns the odd-numbered
+	iamge  */
+.gallery::after {
+	content:""; /* adds empty item */
+	width: 350px; /* same width as image */
+}
+
