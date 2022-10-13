@@ -1,0 +1,145 @@
+/* My CSS code from memory for making a Nutrition Label
+Certification: (New) Responsive Web Design
+Project: Learn typography by building a nutrition label
+*/
+
+/* Box size settings */
+* {
+	box-sizing: border-box;
+}
+
+/* font settings */
+html{
+	font-size: 16px; /* root font size */
+}
+
+body {
+	font-family: 'Open Sans', sans-serif; /* Imported font */
+}
+
+.bold {
+	font-weight: 800;
+}
+
+p {
+	margin: 1px auto;
+}
+
+.sm-text {
+	font-size: 0.85rem;
+}
+
+.italics {
+	font-style: italic;
+}
+
+/* Nutrition Label */
+.label {
+	width: 270px;
+	padding: 3px 6px;
+	border: 2px solid black;
+	margin: 20px auto;
+}
+
+/* divider rules, large & medium */
+.divider {
+	border-bottom: 1px solid grey;
+	margin: 0 auto;
+	clear: right; /* ??? Still a little unclear why this works */
+}
+
+.lg {
+	height: 10px;
+}
+
+.md {
+	height: 5px;
+}
+
+.lg, .md {
+	background-color: black;
+}
+
+/* header settings */
+header h1{
+	text-align: center;
+	margin: -4px auto;
+	letter-spacing: 0.15px;
+}
+
+/* indentation settings */
+.right {
+	float: right;
+}
+
+.indent {
+	margin-left: 1em;
+}
+
+.dbl-indent {
+	margin-left: 2em;
+}
+
+/* Calorie info rules */
+.calorie-info h1{
+	margin: -5px auto;
+}
+
+.calorie-info span {
+	margin: -6px auto;
+	font-size: 1.2em;
+}
+
+/* Daily value rules */
+.daily-value p:not(.no-divider){
+	/* 	Problem: Why not just put a border-bottom
+				  for all daily-value <p> tags OR 
+				  <div> with class "divider"
+				  below each <p> tag?
+		Solution: Not all borders extend the full width
+					of the nutrition label. Instead of
+					adding a divider each time, we can
+					add a border bottom to each <p> (which
+					is more convenient that adding <div>
+					"divider"s after each <p> tag).
+					For the <p> that we want indented,
+					the border gets indented too (which
+					we do not necessarily want). The solution
+					then is to add a bottom-border to all 
+					<p> tags in the daily-value <div> EXCEPT
+					for the tags that have a no-divider class
+					(hence the :not pseudoselector).The 
+					no-divider class does NOT have properties
+					(i.e. look anywhere in this CSS and you 
+					will not find a .no-divider{...} rule). 
+					It is simply a clever way to NOT have
+					dividers that do NOT extend the whole
+					width of the nutrition label. For the 
+					<p> with no-divider, a <div> with a 
+					divider class with the required 
+					indentation (or not) is applied below 
+					this <p> tag in the HTML.
+	*/
+
+		;
+	border-bottom: 1px solid grey;
+}
+
+/* Note rules */
+
+.note{
+	/* The bottom note has the effect of the asterix (*)
+	on the far left and all the text is indented from it.
+	It works because the "note" <div> has 8px of padding
+	left/right and a text-indent of 8px left (-8px) (exact 
+	match with padding). Since the <p> note is very long and 
+	extends into the lines below, only the asterix (*)
+	gets moved to the left while the rest of the text
+	gets blocked by the padding. Clever! */
+	text-indent: -8px;
+	font-size: 0.6rem;
+	padding: 0 8px;
+	margin: 5px 0;
+
+}
+

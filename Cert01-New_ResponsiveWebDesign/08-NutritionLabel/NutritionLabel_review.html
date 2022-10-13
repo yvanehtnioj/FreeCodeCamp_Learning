@@ -1,0 +1,93 @@
+<!-- My HTML code from memory for making a Nutrition Label
+	NOTE: I printed out the label so I could type in the nutritional info (vitamins, DV% etc).
+	NOTE: Also, the font link was copied from the original
+	Certification: (New) Responsive Web Design
+	Project: Learn typography by building a nutrition label
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width scale=1.0"/>
+	<link href="./styles_review.css" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet"/>
+	<title>Nutrition Label</title>
+</head>
+<body>
+	<!-- Whole Nutrition Label -->
+	<div class="label">
+
+		<!-- Nutrition Facts -->
+		<header>
+			<h1 class="bold">Nutrition Facts</h1>
+			<div class="divider"></div>
+			<p>8 servings per container</p>
+			<p class="bold">Serving size <span class="right">2/3 cup (55g)</span></p>
+		</header>
+
+		<!-- Large Divider between Facts and Calorie Info -->
+		<div class="divider lg"></div>
+
+		<!-- Calorie Info -->
+		<div class="calorie-info">
+			<p class="bold sm-text">Amount per serving</p>
+			<h1>Calories <span class="right">230</span></h1>
+		</div>
+
+		<!-- Medium Divider between Facts and Calorie Info -->
+		<div class="divider md"></div>
+
+		<!-- Daily Values -->
+		<div class="daily-value sm-text">
+
+			<p class="bold right no-divider">% Daily Value *</p>
+			<div class="divider"></div>
+
+			<p><span class="bold">Total Fat</span> 8g<span class="right bold">10%</span></p>
+
+			<p class="indent no-divider">Saturated Fat 1g<span class="right bold">5%</span></p>
+			<div class="divider"></div>
+
+			<p class="indent no-divider"><span class="italics">Trans</span> Fat 0g<span class="right bold"></span></p>
+			<div class="divider"></div>
+
+			<p><span class="bold">Cholesterol</span> 0mg<span class="right bold">0%</span></p>
+
+			<p><span class="bold">Sodium</span> 160mg<span class="right bold">7%</span></p>
+
+			<p><span class="bold">Total Carbohydrate</span> 37g<span class="right bold">13%</span></p>
+
+			<p class="indent no-divider">Dietary Fiber 4g</p>
+			<div class="divider"></div>
+
+			<p class="indent no-divider">Total Sugars 12g</p>
+			<div class="divider dbl-indent"></div>
+
+			<p class="dbl-indent no-divider">Includes 10g Added Sugars<span class="right">20%</span></p>
+			<div class="divider"></div>
+
+			<p class="no-divider"><span class="bold">Protein</span> 3g</p>
+
+			<!-- Large Divider to separate vitamins -->
+			<div class="divider lg"></div>
+
+			<p>Vitamin D 2mcg<span class="right">10%</span></p>
+			<p>Calcium 260mcg<span class="right">20%</span></p>
+			<p>Iron 8mg<span class="right">45%</span></p>
+			<p>Potassium 235mcg<span class="right">6%</span></p>
+			
+		</div>
+
+		<!-- Medium divider before Note-->
+		<div class="divider md"></div>
+
+		<!-- Note -->
+		<div class="note">
+			<p>* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</p>
+		</div>
+	</div>
+</body>
+</html>
+
+
